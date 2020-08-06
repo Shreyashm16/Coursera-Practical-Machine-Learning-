@@ -53,6 +53,9 @@ testproblem <- testing[,c(features,"problem_id")]
 
 
 ## Partitioning the data
+
+In order to evaluate our model before submitting it for grading, we'll designate a partition of it for validation.
+
 ```{r}
 inTrain <- createDataPartition(trainclasse$classe, p=0.7, list = FALSE)
 myTraining <- trainclasse[inTrain,]
